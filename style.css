@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    ". title title ."
+    ". choices choices ."
+    ". userChoice compChoice ."
+    ". status status .";
+}
+.title{
+    grid-area:title;
+}
+.choices{
+    grid-area:choices;
+}
+.userChoice{
+    grid-area:userChoice;
+}
+.compChoice{
+    grid-area:compChoice;
+}
+.status{
+    grid-area:status;
+}
+
+.choices{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "rock paper scissors"
+}
+#rock{
+    width: 50px;
+    grid-area:rock;
+    border: solid black;
+    border-radius:50px;
+}
+#paper{
+    width: 50px;
+    grid-area:paper;
+    border: solid black;
+    border-radius:50px;
+}
+#scissors{
+    width: 50px;
+    grid-area:scissors;
+    border: solid black;
+    border-radius:50px;
+}
+h1{
+    text-align: center;
+}
