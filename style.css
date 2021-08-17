@@ -11,6 +11,7 @@
     ". choices choices ."
     ". userChoice compChoice ."
     ". status status .";
+    grid-gap: 100px;
 }
 .title{
     grid-area:title;
@@ -20,12 +21,18 @@
 }
 .userChoice{
     grid-area:userChoice;
+    justify-self: center;
+
 }
 .compChoice{
     grid-area:compChoice;
+    justify-self: center;
+
 }
 .status{
     grid-area:status;
+    justify-self: center;
+
 }
 
 .choices{
@@ -40,18 +47,23 @@
     grid-area:rock;
     border: solid black;
     border-radius:50px;
+    justify-self: center;
 }
 #paper{
     width: 50px;
     grid-area:paper;
     border: solid black;
     border-radius:50px;
+    justify-self: center;
+
 }
 #scissors{
     width: 50px;
     grid-area:scissors;
     border: solid black;
     border-radius:50px;
+    justify-self: center;
+
 }
 h1{
     text-align: center;
