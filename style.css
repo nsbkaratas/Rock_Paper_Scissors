@@ -4,17 +4,24 @@
 }
 .grid{
     display: grid;
-    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-columns: 1fr 400px 400px 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
     ". title title ."
     ". choices choices ."
     ". userChoice compChoice ."
     ". status status .";
-    grid-gap: 100px;
+    grid-gap: 50px;
 }
 .title{
     grid-area:title;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(224, 206, 222);
 }
 .choices{
     grid-area:choices;
@@ -37,31 +44,25 @@
 
 .choices{
     display: grid;
+    cursor: pointer;
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
     "rock paper scissors"
 }
 #rock{
-    width: 50px;
-    grid-area:rock;
-    border: solid black;
-    border-radius:50px;
+    grid-area:rock;   
     justify-self: center;
 }
 #paper{
-    width: 50px;
     grid-area:paper;
-    border: solid black;
-    border-radius:50px;
+    
     justify-self: center;
 
 }
 #scissors{
-    width: 50px;
     grid-area:scissors;
-    border: solid black;
-    border-radius:50px;
+  
     justify-self: center;
 
 }
