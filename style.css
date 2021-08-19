@@ -8,10 +8,11 @@
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
     ". title title ."
+    ". move move ."
     ". choices choices ."
+    ". player computer ."
     ". userChoice compChoice ."
     ". status status .";
-    grid-gap: 50px;
 }
 .title{
     grid-area:title;
@@ -22,6 +23,32 @@
     align-items: center;
     justify-content: center;
     background: rgb(224, 206, 222);
+}
+.move{
+    grid-area: move;
+    text-align:center;
+    font-size: 2em ;
+    margin: 20px;
+    padding: 30px;
+
+}
+.player{
+    grid-area: player;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    font-size: 2em;
+    align-items: center;
+    justify-content: center; 
+}
+.computer{
+    grid-area: computer;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    font-size: 2em;
+    align-items: center;
+    justify-content: center; 
 }
 .choices{
     grid-area:choices;
@@ -39,7 +66,6 @@
 .status{
     grid-area:status;
     justify-self: center;
-
 }
 
 .choices{
@@ -54,18 +80,39 @@
     grid-area:rock;   
     justify-self: center;
 }
+/* .not-allowed{
+    cursor:not-allowed
+} */
 #paper{
-    grid-area:paper;
-    
+    grid-area:paper;    
     justify-self: center;
-
 }
 #scissors{
-    grid-area:scissors;
-  
+    grid-area:scissors;  
     justify-self: center;
-
 }
 h1{
     text-align: center;
+}
+#restart-button{
+    display: none;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: burlywood;
+}
+#scoreBoard{ 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    color: black;
 }
