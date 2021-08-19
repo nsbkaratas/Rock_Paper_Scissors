@@ -1,11 +1,15 @@
+let userScore1=0
+let computerScore1=0
 const paper= document.querySelector("#paper")
 const scissors= document.querySelector("#scissors")
 const rock= document.querySelector("#rock")
 const userChoice = document.querySelector(".userChoice")
 const reset=document.querySelector("#restart-button")
-const status= document.querySelector("#scoreBoard")
 const resButton = document.querySelector("#restart-button")
+let userScore=document.querySelector("#user-score")
+let computerScore=document.querySelector("#computer-score")
 const arr=['rock','paper','scissors']
+
 
 
 //display rock for user when selected
@@ -16,7 +20,7 @@ function add_rock() {
 	document.getElementById('placehere').appendChild(img);
     let comp=compChoice() 
     winnerRock(arr[0],comp)
-    console.log(winnerRock(arr[0],comp))
+    // console.log(winnerRock(arr[0],comp))
     //reset.style.display="inline-block"
     //status.style.display="inline-block"
     //status.innerText=winnerRock(arr[0],comp)
@@ -30,10 +34,10 @@ function add_paper() {
 	document.getElementById('placehere').appendChild(img);
     let comp=compChoice()
     winnerPaper(arr[1],comp)
-    console.log(winnerPaper(arr[1],comp))
-    reset.style.display="inline-block"
-    status.style.display="inline-block"
-    status.innerText=winnerPaper(arr[1],comp)
+    // console.log(winnerPaper(arr[1],comp))
+    // reset.style.display="inline-block"
+    // status.style.display="inline-block"
+    // status.innerText=winnerPaper(arr[1],comp)
 }
 //display scissors for user when selected
 scissors.addEventListener("click", add_scissors)
@@ -43,17 +47,13 @@ function add_scissors() {
 	document.getElementById('placehere').appendChild(img);
     let comp=compChoice()
     winnerScissors(arr[2],comp)
-    console.log(winnerScissors(arr[2],comp))
-    reset.style.display="inline-block"
-    status.style.display="inline-block"
-    status.innerText=winnerScissors(arr[2],comp)
+    // console.log(winnerScissors(arr[2],comp))
+    // reset.style.display="inline-block"
+    // status.style.display="inline-block"
+    // status.innerText=winnerScissors(arr[2],comp)
 }
 
-//Restart button functionality
-resButton.addEventListener("click", restart)
-function restart(){   
-    window.location.reload()       
-}
+
 // function for computer random selection
 function compChoice(){
     let i=Math.floor(Math.random()*arr.length)
@@ -63,41 +63,58 @@ function compChoice(){
     document.getElementById('placeForComp').append(img)
     return compPick
 }
-// case of player selection of rock
+// winner indication for when player select rock
 function winnerRock(user,computer){
     if(user==computer){
         return "it's a tie!"
     }
     else if(computer=== "scissors"){
+        userScore1++
+        userScore.textContent=userScore1
         return"Congragulations! You Win!" 
     }
     else{
+        computerScore1++
+        computerScore.textContent=computerScore1
         return "Sorry you lost :("
     }
 }
-//case of player selection of paper
+// winner indication for when player select paper
 function winnerPaper(user,computer){
     if(user===computer){
         return "it's a tie!"
     }
     else if(computer==="rock"){
+        userScore1++
+        userScore.textContent=userScore1       
         return  "Congragulations! You Win!"
     }
     else{
+        computerScore1++
+        computerScore.textContent=computerScore1
         return "Sorry you lost :("       
     }
 }
 
-//case of player selection of scissors
+// winner indication for when player select scissors
 function winnerScissors(user,computer){
     if(user==computer){
         return "it's a tie!"
     }
     else if(computer==="paper"){
+        userScore1++
+        userScore.textContent=userScore1
         return "Congragulations! You Win!"
     }
     else{
+        computerScore1++
+        computerScore.textContent=computerScore1
         return "Sorry you lost :("
     }
 }
-//resarting the game
+
+//Restart button functionality
+resButton.addEventListener("click", restart)
+function restart(){   
+    window.location.reload()       
+}
