@@ -5,12 +5,12 @@ const paper= document.querySelector("#paper")
 const scissors= document.querySelector("#scissors")
 const rock= document.querySelector("#rock")
 const userChoice = document.querySelector(".userChoice")
-const reset=document.querySelector("#restart-button")
 const resButton = document.querySelector(".restart-button")
 let userScore=document.querySelector("#user-score")
 let computerScore=document.querySelector("#computer-score")
 let modalBg= document.querySelector(".modal-bg")
 const arr=['rock','paper','scissors']
+
 
 
 
@@ -46,12 +46,12 @@ function add_scissors() {
    
 }
 
-//Restart button functionality
+//Restart button functionality in the modal
 resButton.addEventListener("click", restart)
 function restart(){   
     window.location.reload()       
 }
-
+//Game over function in the modal
 function gameOver(winner){
     if(winner==1){
         displayWinner.innerHTML="Player won!"
