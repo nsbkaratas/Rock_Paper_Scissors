@@ -17,15 +17,6 @@ This project is built with following technologies:
 `CSS`
 `Vanilla Javascript`
 
-
-## Installation
-
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
     
 ## Approach taken
 
