@@ -11,9 +11,6 @@ let computerScore=document.querySelector("#computer-score")
 let modalBg= document.querySelector(".modal-bg")
 const arr=['rock','paper','scissors']
 
-
-
-
 //display rock for user when selected
 rock.addEventListener("click", add_rock)
 function add_rock() { 
@@ -42,8 +39,7 @@ function add_scissors() {
     img.src="images/scissors.png"
 	document.getElementById('placehere').appendChild(img);
     let comp=compChoice()
-    winnerScissors(arr[2],comp)
-   
+    winnerScissors(arr[2],comp)   
 }
 
 //Restart button functionality in the modal
@@ -70,6 +66,7 @@ function compChoice(){
     document.getElementById('placeForComp').append(img)
     return compPick
 }
+
 // winner indication for when player select rock
 function winnerRock(user,computer){
     if(user==computer){
@@ -90,6 +87,7 @@ function winnerRock(user,computer){
         }    
     }
 }
+
 // winner indication for when player select paper
 function winnerPaper(user,computer){
     if(user===computer){
@@ -130,4 +128,3 @@ function winnerScissors(user,computer){
         }
     }
 }
-
