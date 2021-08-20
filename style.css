@@ -136,6 +136,13 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0, opacity 0.3s;
+}
+.bg-active{
+    visibility: visible;
+    opacity: 1;
 }
 .modal{
     background-color: white;
@@ -145,10 +152,10 @@ h1{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+   
 }
 .status{
-    margin: 0;
-    padding: 20%;
+ 
     font-size: 40px;
 }
 .restart-button{
