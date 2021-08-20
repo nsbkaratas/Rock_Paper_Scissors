@@ -44,6 +44,10 @@ I would have loved to replace the choices whith each click.
 
 Right now, all the choices are displayed side by side and it doesn't look good.
 
+
+## 🔗 Link to the live page
+[![](https://nsbkaratas.github.io/Rock_Paper_Scissors/)
+
   ## Screenshots
   ![](images/Screenshot%20(273).png)
 
