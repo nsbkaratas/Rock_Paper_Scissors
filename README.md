@@ -45,4 +45,5 @@ I would have loved to replace the choices whith each click.
 Right now, all the choices are displayed side by side and it doesn't look good.
 
   ## Screenshots
+  ![](images/Screenshot%20(273).png
 
